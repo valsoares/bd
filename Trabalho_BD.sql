@@ -302,3 +302,61 @@ INSERT INTO Testagem(Data_testagem, Tipo, Contaminação, ID, Nome) VALUES ('202
 INSERT INTO Testagem(Data_testagem, Tipo, Contaminação, ID, Nome) VALUES ('2020-09-02 14:05:34', 'Teste rapido', 1, 11, 'Centro de Saúde Menino Jesus');
 
 
+-- VIEW
+
+CREATE VIEW melhores_estados AS 
+SELECT UF 
+FROM Estado
+INNER JOIN Efetividade
+ON Estado.ID = Efetividade.ID
+WHERE Efetividade.Grau = 'Muito Alta';
+
+
+-- PROCEDURE
+
+DELIMITER // 
+CREATE PROCEDURE  Quantidade_pacientes(UF varchar(2)) 
+BEGIN 
+SELECT count(*)
+FROM paciente, hospital 
+WHERE paciente.nome = hospital.nome AND UF = hospital.UF; 
+END // DELIMITER ;
+
+
+-- CINCO CONSULTAS EM ALGEBRA RELACIONAL
+
+SELECT paciente.ID, sintoma_paciente.tipo, comorbidade_paciente.tipo
+FROM paciente
+LEFT JOIN sintoma_paciente ON sintoma_paciente.ID = paciente.ID
+LEFT JOIN comorbidade_paciente ON comorbidade_paciente.ID = paciente.ID
+ORDER BY paciente.ID ASC;
+
+SELECT governador.nome, ações.código, ações.descrição
+FROM governador
+RIGHT JOIN execução ON execução.RG = governador.RG
+RIGHT JOIN ações ON Ações.código = execução.Código
+ORDER BY governador.nome ASC;
+
+SELECT estado.UF, count(hospital.nome), count(posto_de_saúde.nome)
+FROM Estado
+RIGHT JOIN hospital ON hospital.UF = Estado.UF
+RIGHT JOIN posto_de_saúde ON posto_de_saúde.UF = Estado.UF
+GROUP BY estado.UF
+ORDER BY Estado.UF ASC;
+
+SELECT paciente.sexo, count(*)
+FROM sintoma_paciente, sintoma, paciente
+WHERE sintoma.gravidade = 'Alta' AND sintoma_paciente.ID = paciente.ID
+GROUP BY paciente.sexo
+ORDER BY paciente.sexo ASC;
+
+SELECT governador.nome, efetividade.grau
+FROM governador
+INNER JOIN Estado on Governador.RG = Estado.RG
+INNER JOIN Efetividade on Efetividade.ID = Estado.ID
+ORDER BY governador.nome ASC;
+
+
+
+
+
