@@ -311,6 +311,8 @@ INNER JOIN Efetividade
 ON Estado.ID = Efetividade.ID
 WHERE Efetividade.Grau = 'Muito Alta';
 
+CALL melhores_estados;
+
 
 -- PROCEDURE
 
@@ -322,6 +324,8 @@ FROM paciente, hospital
 WHERE paciente.nome = hospital.nome AND UF = hospital.UF; 
 END // DELIMITER ;
 
+CALL Quantidade_pacientes('DF');
+
 
 -- CINCO CONSULTAS EM ALGEBRA RELACIONAL
 
@@ -331,10 +335,10 @@ LEFT JOIN sintoma_paciente ON sintoma_paciente.ID = paciente.ID
 LEFT JOIN comorbidade_paciente ON comorbidade_paciente.ID = paciente.ID
 ORDER BY paciente.ID ASC;
 
-SELECT governador.nome, ações.código, ações.descrição
+SELECT governador.nome, ações.descrição
 FROM governador
-RIGHT JOIN execução ON execução.RG = governador.RG
-RIGHT JOIN ações ON Ações.código = execução.Código
+LEFT JOIN execução ON execução.RG = governador.RG
+LEFT JOIN ações ON Ações.código = execução.Código
 ORDER BY governador.nome ASC;
 
 SELECT estado.UF, count(hospital.nome), count(posto_de_saúde.nome)
