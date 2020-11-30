@@ -12,6 +12,8 @@ import Sintoma from '../../components/sintoma';
 
 import styles from './styles.module.css';
 
+import { FiChevronsDown } from "react-icons/fi";
+
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -24,16 +26,23 @@ export default class Home extends React.Component {
 
         return (
             <div className={styles.total}>
-                
-                <Governador/>
-                <Efetividade/>    
-                <Acoes/>
-                <Estado/>
-                <Posto/>
-                <Hospital/>
-                <Paciente/>
-                <Comorbidade/>
-                <Sintoma/>
+
+                <div className={styles.banner}>
+                    <h1>Tabelas COVID</h1>
+                    <FiChevronsDown/>  
+                    <p>Desça para ver</p> 
+                </div>    
+                <div className={styles.tabelas}>
+                    <Governador/>
+                    <Efetividade/>    
+                    <Acoes/>
+                    <Estado/>
+                    <Posto/>
+                    <Hospital/>
+                    <Paciente/>
+                    <Comorbidade/>
+                    <Sintoma/>                    
+                </div>            
 
             </div>
         );

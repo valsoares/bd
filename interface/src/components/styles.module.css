@@ -7,6 +7,8 @@
 
 .total h1 {
     text-align: center;
+    border-bottom: rgb(46,61,85) 3px solid;
+    border-top: rgb(46,61,85) 3px solid;
 }
 
 .total .button {

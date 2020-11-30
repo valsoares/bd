@@ -1,3 +1,45 @@
 .total {
-    
+    display: grid;
+    grid-template-areas: 'banner'
+                         'tabelas' ;
+    grid-row: 2fr 1fr;
 }
+
+.total .banner{
+    grid-area: 'banner';
+    background-image: url('../../itens/1.png');
+    /* background-color: salmon; */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.total .banner h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+
+}
+
+.total .banner svg {
+    font-size: 50px;
+}
+
+.total .banner p {
+    position: absolute;
+    margin-top: 100px;
+}
+
+.total .tabelas {
+    grid-area:'tabelas';
+    margin-top: 110vh;
+}
+
