@@ -26,7 +26,10 @@ const connection = mysql.createConnection({
 });
 
 ```
-É necessário acessar a pasta onde está o arquivo `app.js` (nesse caso é a pasta inicial do repositório) pelo terminal e dar o seguinte comando 
+É necessário acessar a pasta onde está o arquivo `app.js` (nesse caso é a pasta inicial do repositório) pelo terminal e dar os seguintes comandos
+```
+npm install
+```
 ```
 node app.js
 ```
