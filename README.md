@@ -26,7 +26,10 @@ const connection = mysql.createConnection({
 });
 
 ```
-É necessário acessar a pasta onde está o arquivo `app.js` (nesse caso é a pasta inicial do repositório) pelo terminal e dar o seguinte comando 
+É necessário acessar a pasta onde está o arquivo `app.js` (nesse caso é a pasta inicial do repositório) pelo terminal e dar os seguintes comandos
+```
+npm install
+```
 ```
 node app.js
 ```
@@ -37,3 +40,16 @@ npm install
 ```
 npm start
 ```
+
+## :camera_flash: Capturas de tela
+### Tela inicial
+<img src="https://github.com/valsoares/bd/blob/main/prints/4.png" alt="banner" width="700">
+
+### Visão da tabela
+<img src="https://github.com/valsoares/bd/blob/main/prints/1.png" alt="tabela" width="700">
+
+### Inserção de registro
+<img src="https://github.com/valsoares/bd/blob/main/prints/2.png" alt="adc" width="700">
+
+### Edição de registro 
+<img src="https://github.com/valsoares/bd/blob/main/prints/3.png" alt="editar" width="700">
