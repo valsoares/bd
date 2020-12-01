@@ -53,3 +53,11 @@ npm start
 
 ### Edição de registro 
 <img src="https://github.com/valsoares/bd/blob/main/prints/3.png" alt="editar" width="700">
+
+## :scroll: Créditos
+
+1. Imagem da tela inicial
+> <a href="http://www.freepik.com">Designed by denamorado / Freepik</a>
+
+2. Tabelas 
+> <a href="http://allenfang.github.io/react-bootstrap-table/index.html">React Bootstrap Table</a>
