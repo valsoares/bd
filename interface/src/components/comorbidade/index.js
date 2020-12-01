@@ -163,10 +163,11 @@ export default class Comorbidade extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='Tipo' isKey={ true }>Tipo</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Descrição' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Descrição</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Gravidade'>Gravidade</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='Tipo' filter={ { type: 'TextFilter' } } isKey={ true }>Tipo</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Descrição' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Descrição</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Gravidade' filter={ { type: 'TextFilter' } }>Gravidade</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

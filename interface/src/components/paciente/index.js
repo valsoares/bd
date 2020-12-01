@@ -195,11 +195,12 @@ export default class Paciente extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='ID' isKey={ true } hiddenOnInsert>ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Sexo'>Sexo</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Data_de_nascimento'>Data de nascimento. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Nome' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome do hospital</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='ID' filter={ { type: 'TextFilter' } } isKey={ true } hiddenOnInsert>ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Sexo' filter={ { type: 'TextFilter' } }>Sexo</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Data_de_nascimento' filter={ { type: 'TextFilter' } }>Data de nascimento. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Nome' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome do hospital</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

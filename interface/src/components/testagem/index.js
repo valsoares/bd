@@ -197,14 +197,13 @@ export default class Testagem extends React.Component {
                     selectRow={ selectRow } 
                     insertRow 
                     deleteRow
-                    keyField ={this.state.pk}
                     >
 
-                    <TableHeaderColumn isKey={true} dataField='Data_testagem' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data da testagem. Formato aceito: ano-dia-mes hh:mm:ss (ex: 2000-02-02 12:03:10)</TableHeaderColumn>
-                    <TableHeaderColumn dataField='ID'>ID do paciente</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Tipo'>Tipo de teste</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Contaminação'>Contaminação. Formato: 0 ou 1</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Nome' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome do posto de saúde</TableHeaderColumn>
+                    <TableHeaderColumn isKey={true} filter={ { type: 'TextFilter' } } dataField='Data_testagem' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data da testagem. Formato aceito: ano-dia-mes hh:mm:ss (ex: 2000-02-02 12:03:10)</TableHeaderColumn>
+                    <TableHeaderColumn dataField='ID' filter={ { type: 'TextFilter' } }>ID do paciente</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Tipo' filter={ { type: 'TextFilter' } }>Tipo de teste</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Contaminação' filter={ { type: 'TextFilter' } }>Contaminação. Formato: 0 ou 1</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Nome' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome do posto de saúde</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

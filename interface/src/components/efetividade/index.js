@@ -161,10 +161,11 @@ export default class Efetividade extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='ID' isKey={ true }>ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Grau'>Grau</TableHeaderColumn>
-                    <TableHeaderColumn tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} dataField='Descrição'>Descrição</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='ID' filter={ { type: 'TextFilter' } } isKey={ true }>ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Grau' filter={ { type: 'TextFilter' } }>Grau</TableHeaderColumn>
+                    <TableHeaderColumn filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} dataField='Descrição'>Descrição</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

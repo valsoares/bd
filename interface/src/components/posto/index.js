@@ -168,11 +168,12 @@ export default class Posto extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='Nome' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} isKey={ true }>Nome</TableHeaderColumn>
-                    <TableHeaderColumn dataField='CEP'>CEP</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Capacidade_diária'>Capacidade diária</TableHeaderColumn>
-                    <TableHeaderColumn dataField='UF'>UF</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='Nome' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} isKey={ true }>Nome</TableHeaderColumn>
+                    <TableHeaderColumn dataField='CEP' filter={ { type: 'TextFilter' } }>CEP</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Capacidade_diária' filter={ { type: 'TextFilter' } }>Capacidade diária</TableHeaderColumn>
+                    <TableHeaderColumn dataField='UF' filter={ { type: 'TextFilter' } }>UF</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

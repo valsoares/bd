@@ -191,11 +191,12 @@ export default class Governador extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='RG' isKey={ true }>RG</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Nome' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Data_nascimento' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data de nascimento. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Data_de_admissão' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data de admissão. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='RG' filter={ { type: 'TextFilter' } } isKey={ true }>RG</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Nome' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Nome</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Data_nascimento' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data de nascimento. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Data_de_admissão' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Data de admissão. Formato aceito: ano-dia-mes (ex: 2000-02-02)</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

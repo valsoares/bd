@@ -174,11 +174,12 @@ export default class Hospital extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='Nome' tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} isKey={ true }>Nome</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Numero_de_leitos'>Número de leitos</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Taxa_de_ocupação'>Taxa de ocupação</TableHeaderColumn>
-                    <TableHeaderColumn dataField='UF'>UF</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='Nome' filter={ { type: 'TextFilter' } } tdStyle={{ whiteSpace: 'normal', wordWrap: 'break-word' }} isKey={ true }>Nome</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Numero_de_leitos' filter={ { type: 'TextFilter' } }>Número de leitos</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Taxa_de_ocupação' filter={ { type: 'TextFilter' } }>Taxa de ocupação</TableHeaderColumn>
+                    <TableHeaderColumn dataField='UF' filter={ { type: 'TextFilter' } }>UF</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

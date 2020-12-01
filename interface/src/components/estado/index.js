@@ -185,13 +185,14 @@ export default class Estado extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='UF' isKey={ true }>UF</TableHeaderColumn>
-                    <TableHeaderColumn dataField='População'>População</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Quant_postos_saude'>Quantidade de postos de saúde</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Quant_hospitais'>Quantidade de hospitais</TableHeaderColumn>
-                    <TableHeaderColumn dataField='ID'>ID da efetividade</TableHeaderColumn>
-                    <TableHeaderColumn dataField='RG'>RG do governador</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='UF' filter={ { type: 'TextFilter' } } isKey={ true }>UF</TableHeaderColumn>
+                    <TableHeaderColumn dataField='População' filter={ { type: 'TextFilter' } }>População</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Quant_postos_saude' filter={ { type: 'TextFilter' } }>Quantidade de postos de saúde</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Quant_hospitais' filter={ { type: 'TextFilter' } }>Quantidade de hospitais</TableHeaderColumn>
+                    <TableHeaderColumn dataField='ID' filter={ { type: 'TextFilter' } }>ID da efetividade</TableHeaderColumn>
+                    <TableHeaderColumn dataField='RG' filter={ { type: 'TextFilter' } }>RG do governador</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );

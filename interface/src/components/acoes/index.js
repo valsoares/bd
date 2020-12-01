@@ -162,10 +162,11 @@ export default class Acoes extends React.Component {
                     options={ options } 
                     selectRow={ selectRow } 
                     insertRow 
-                    deleteRow>
-                    <TableHeaderColumn dataField='Código' isKey={ true }>Código</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Eficácia'>Eficácia</TableHeaderColumn>
-                    <TableHeaderColumn dataField='Descrição'>Descrição</TableHeaderColumn>
+                    deleteRow
+                    >
+                    <TableHeaderColumn dataField='Código' filter={ { type: 'TextFilter' } } isKey={ true }>Código</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Eficácia' filter={ { type: 'TextFilter' } }>Eficácia</TableHeaderColumn>
+                    <TableHeaderColumn dataField='Descrição' filter={ { type: 'TextFilter' } }>Descrição</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );
