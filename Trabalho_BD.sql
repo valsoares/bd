@@ -311,7 +311,7 @@ INNER JOIN Efetividade
 ON Estado.ID = Efetividade.ID
 WHERE Efetividade.Grau = 'Muito Alta';
 
-CALL melhores_estados;
+SELECT * FROM melhores_estados;
 
 
 -- PROCEDURE
@@ -319,7 +319,7 @@ CALL melhores_estados;
 DELIMITER // 
 CREATE PROCEDURE  Quantidade_pacientes(UF varchar(2)) 
 BEGIN 
-SELECT count(*)
+SELECT count(*) AS qnt
 FROM paciente, hospital 
 WHERE paciente.nome = hospital.nome AND UF = hospital.UF; 
 END // DELIMITER ;

@@ -9,6 +9,7 @@ import Hospital from '../../components/hospital';
 import Paciente from '../../components/paciente';
 import Comorbidade from '../../components/comorbidade';
 import Sintoma from '../../components/sintoma';
+import Procedure from '../../components/procedure';
 
 import styles from './styles.module.css';
 
@@ -41,7 +42,8 @@ export default class Home extends React.Component {
                     <Hospital/>
                     <Paciente/>
                     <Comorbidade/>
-                    <Sintoma/>                    
+                    <Sintoma/>
+                    <Procedure/>                    
                 </div>            
 
             </div>

@@ -570,3 +570,26 @@ app.delete('/sintomas/:pk', (req, res) => {
     res.json({resultado});
   });
 });
+
+// Procedure
+
+app.get('/procedure/:uf', (req, res) => {
+  const {uf} = req.params;
+  const sql = "CALL trabalho.Quantidade_pacientes(?)";
+  connection.query(sql, [uf], (err, resultado, fields) => {
+    if(err) console.log("Erro ao executar a procedure: %s ",err );
+    res.send(resultado[0])
+  });
+});
+
+// View 
+
+app.get('/view', (req, res) => {
+  const sql = "SELECT * FROM trabalho.melhores_estados";
+  connection.query(sql, (err, resultado, fields) => {
+    if(err) console.log("Erro ao executar a view: %s ",err );
+    res.send(resultado.map((r) => {
+      return r;
+    }))
+  });
+});

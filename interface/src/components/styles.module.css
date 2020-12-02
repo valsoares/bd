@@ -11,6 +11,26 @@
     border-top: rgb(46,61,85) 3px solid;
 }
 
+.total .box p {
+    font-size: 20px;
+
+}
+
+.total .box input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 18px;
+}
+
+.total .box button {
+    padding: 10px;
+    background-color: #337ab7;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
 .total .button {
     cursor: pointer;
     margin-left:144px;
